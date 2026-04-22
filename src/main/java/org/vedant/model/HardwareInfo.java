@@ -14,6 +14,20 @@ public record HardwareInfo(
         int bitness             // 64
 ) {
 
+    public static final HardwareInfo EMPTY = new HardwareInfo(
+            "Unknown",
+            "Unknown",
+            "N/A",
+            "Unknown CPU",
+            0,
+            0,
+            "Unknown",
+            0L,
+            0L,
+            "Unknown OS",
+            64
+    ) ;
+
     @Override
     public String toString() {
         return "HardwareInfo{" +

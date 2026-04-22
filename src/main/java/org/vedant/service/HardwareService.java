@@ -38,8 +38,7 @@ public class HardwareService {
 
         }catch (Exception e){
             System.err.println("Failed to Fetch Hardware Report: " + e.getMessage());
-            return new HardwareInfo("Unknown", "Unknown", "N/A", "Unknown CPU",
-                    0, 0, "Unknown", 0L, 0L, "Unknown OS", 64);
+            return HardwareInfo.EMPTY;
         }
     }
 }
