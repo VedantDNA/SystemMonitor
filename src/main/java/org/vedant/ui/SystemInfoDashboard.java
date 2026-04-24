@@ -14,7 +14,6 @@ public class SystemInfoDashboard extends JFrame {
 
     private final MonitoringOrchestrator orchestrator;
 
-    // UI Components to be updated
     private JLabel lblModel, lblOS, lblSerial;
     private JProgressBar totalCpuBar;
     private List<JProgressBar> coreBars;
