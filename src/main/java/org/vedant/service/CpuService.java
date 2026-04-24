@@ -47,7 +47,7 @@ public class CpuService {
     }
 
     public List<OSProcess> getTopProcesses(){
-        return os.getProcesses(OperatingSystem.ProcessFiltering.ALL_PROCESSES,OperatingSystem.ProcessSorting.CPU_DESC,20);
+        return os.getProcesses(OperatingSystem.ProcessFiltering.ALL_PROCESSES,OperatingSystem.ProcessSorting.CPU_DESC,50);
     }
 
 }
