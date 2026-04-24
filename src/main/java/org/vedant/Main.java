@@ -8,24 +8,20 @@ import org.vedant.ui.SystemInfoDashboard;
 import oshi.SystemInfo;
 
 import javax.swing.*;
-import java.time.Instant;
 
 public class Main {
     public static void main (String[] args) throws InterruptedException {
-        // 1. Initialize OSHI once
         SystemInfo si = new SystemInfo();
 
-        // 2. Initialize Services
         HardwareService hardwareService = new HardwareService(si);
         CpuService cpuService = new CpuService(si);
         MemoryService memoryService = new MemoryService(si);
 
-        // 3. Initialize Orchestrator
         MonitoringOrchestrator orchestrator = new MonitoringOrchestrator(
                 hardwareService, cpuService, memoryService
         );
 
-        // 4. Launch UI on the Event Dispatch Thread
+        // included because the gui was sometimes breaking because of some thread problems and mull pointer exceptions:
         SwingUtilities.invokeLater(() -> new SystemInfoDashboard(orchestrator));
     }
 }
