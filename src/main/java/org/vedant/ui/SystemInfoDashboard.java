@@ -77,7 +77,7 @@ public class SystemInfoDashboard extends JFrame {
         totalCpuBar.setStringPainted(true);
         cpuMaster.add(totalCpuBar, BorderLayout.NORTH);
 
-        JPanel coresGrid = new JPanel(new GridLayout(1, 10, 5, 5));
+        JPanel coresGrid = new JPanel(new GridLayout(1, cores, 5, 5));
         for (int i = 0; i < 10; i++) {
             JProgressBar bar = new JProgressBar(JProgressBar.VERTICAL, 0, 100);
             bar.setStringPainted(true);
