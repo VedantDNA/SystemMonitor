@@ -1,16 +1,16 @@
 package org.vedant.model;
 
 public record HardwareInfo(
-        String manufacturer,    // e.g., "Apple Inc."
-        String model,           // e.g., "Mac16,10"
-        String serialNumber,    // e.g., "VM4-XXXX"
-        String cpuName,         // e.g., "Apple M4"
+        String manufacturer,    // eg; "Apple Inc."
+        String model,           // eg; "Mac16,10"
+        String serialNumber,    // eg; "VM4-XXXX"
+        String cpuName,         // eg; "Apple M4"
         int physicalCores,      // 10
         int logicalCores,       // 10
         String microArch,       // "Firestorm + Icestorm"
         long maxFrequencyHz,    // Clock speed for scaling graphs
         long totalRamBytes,     // Raw bytes for precise math
-        String osName,          // e.g., "macOS Sequoia"
+        String osName,          // eg; "macOS Sequoia"
         int bitness             // 64
 ) {
 
