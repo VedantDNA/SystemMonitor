@@ -29,7 +29,7 @@ public class SystemInfoDashboard extends JFrame {
         setupFrame();
 
         JPanel headerPanel = createHeaderPanel();
-        JPanel cpuPanel = createCpuPanel();
+        JPanel cpuPanel = createCpuPanel(orchestrator.getStaticHardwareReport().physicalCores());
         JPanel memoryPanel = createMemoryPanel();
         JPanel processesPanel = createProcessesTable();
 
@@ -69,7 +69,7 @@ public class SystemInfoDashboard extends JFrame {
         return header;
     }
 
-    private JPanel createCpuPanel() {
+    private JPanel createCpuPanel(int cores) {
         JPanel cpuMaster = new JPanel(new BorderLayout());
         cpuMaster.setBorder(BorderFactory.createTitledBorder("CPU Performance:"));
 
