@@ -21,7 +21,8 @@ public class MonitoringOrchestrator {
                 Instant.now().toEpochMilli(),
                 cpuService.fetch(),
                 memoryService.fetch(),
-                staticHardwareReport
+                staticHardwareReport,
+                cpuService.getTopProcesses()
         );
     }
 

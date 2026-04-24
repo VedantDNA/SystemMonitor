@@ -3,9 +3,11 @@ package org.vedant.service;
 import org.vedant.model.CpuMetrics;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
+import oshi.software.os.OSProcess;
 import oshi.software.os.OperatingSystem;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class CpuService {
 
@@ -42,6 +44,10 @@ public class CpuService {
             System.err.println("Unable to Capture Data: " + e.getMessage());
             return CpuMetrics.EMPTY;
         }
+    }
+
+    public List<OSProcess> getTopProcesses(){
+        return os.getProcesses(OperatingSystem.ProcessFiltering.ALL_PROCESSES,OperatingSystem.ProcessSorting.CPU_DESC,20);
     }
 
 }
