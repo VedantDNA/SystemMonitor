@@ -6,7 +6,6 @@ import oshi.hardware.CentralProcessor;
 import oshi.software.os.OSProcess;
 import oshi.software.os.OperatingSystem;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class CpuService {

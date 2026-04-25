@@ -71,7 +71,7 @@ public class SystemInfoDashboard extends JFrame {
 
     private JPanel createCpuPanel(int cores) {
         JPanel cpuMaster = new JPanel(new BorderLayout());
-        cpuMaster.setBorder(BorderFactory.createTitledBorder("CPU Performance: " + cores + " Cores"));
+        cpuMaster.setBorder(BorderFactory.createTitledBorder("CPU Utilization: " + cores + " Cores"));
 
         totalCpuBar = new JProgressBar(0, 100);
         totalCpuBar.setStringPainted(true);
